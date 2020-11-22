@@ -34,6 +34,7 @@ add_library(
     ${LUA_DIR}/lparser.c
     ${LUA_DIR}/lstate.c
     ${LUA_DIR}/lstring.c
+    ${LUA_DIR}/lstrlib.c
     ${LUA_DIR}/ltable.c
     ${LUA_DIR}/ltablib.c
     ${LUA_DIR}/ltm.c
