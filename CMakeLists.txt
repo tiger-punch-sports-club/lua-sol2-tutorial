@@ -49,6 +49,7 @@ add_library(
 add_executable(
     sandbox
     ${APP_SOURCE_DIR}/main.cpp
+    ${APP_SOURCE_DIR}/script.lua
 )
 
 target_link_libraries(
@@ -60,4 +61,9 @@ target_include_directories(
     sandbox
     PRIVATE ${EXTERNALS_DIR}
     PRIVATE ${LUA_DIR} # as of sol2 3.2.2, lua.hpp must be accesible through root include '#include <lua.hpp>'
+)
+
+set_property(
+    TARGET sandbox
+    PROPERTY VS_DEBUGGER_WORKING_DIRECTORY "${APP_SOURCE_DIR}"
 )
